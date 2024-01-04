@@ -13,7 +13,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <spock-core.version>2.4-M1-groovy-4.0</spock-core.version>
-        <groovy-all.version>4.0.16</groovy-all.version>
+        <groovy-all.version>4.0.13</groovy-all.version>
         <gmavenplus-plugin.version>3.0.2</gmavenplus-plugin.version>
     </properties>
 
@@ -29,6 +29,12 @@
             <artifactId>groovy-all</artifactId>
             <version>${groovy-all.version}</version>
             <type>pom</type>
+        </dependency>
+        <dependency> <!-- enables mocking of classes (in addition to interfaces) -->
+            <groupId>cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+            <version> 3.3.0</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
